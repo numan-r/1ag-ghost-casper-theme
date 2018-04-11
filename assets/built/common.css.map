@@ -1,0 +1,1 @@
+{"version":3,"sources":["common.css"],"names":[],"mappings":"AAAA,WACI,kBAAmB,AACnB,WAAY,AACZ,WAAa,CAChB","file":"common.css","sourcesContent":[".particles{\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n}"],"sourceRoot":"/source/"}

@@ -6,6 +6,7 @@ var livereload = require('gulp-livereload');
 var postcss = require('gulp-postcss');
 var sourcemaps = require('gulp-sourcemaps');
 var zip = require('gulp-zip');
+var uglify = require('gulp-uglify');
 
 // postcss plugins
 var autoprefixer = require('autoprefixer');
@@ -24,8 +25,18 @@ var nodemonServerInit = function () {
     livereload.listen(1234);
 };
 
-gulp.task('build', ['css'], function (/* cb */) {
+gulp.task('build', ['js', 'css'], function (/* cb */) {
     return nodemonServerInit();
+});
+
+gulp.task('js', function () {
+    return gulp.src('assets/js/*.js')
+        .on('error', swallowError)
+        .pipe(sourcemaps.init())
+        .pipe(uglify())
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('assets/built/'))
+        .pipe(livereload());
 });
 
 gulp.task('css', function () {
@@ -33,7 +44,7 @@ gulp.task('css', function () {
         easyimport,
         customProperties,
         colorFunction(),
-        autoprefixer({browsers: ['last 2 versions']}),
+        autoprefixer({ browsers: ['last 2 versions'] }),
         cssnano()
     ];
 
@@ -48,9 +59,10 @@ gulp.task('css', function () {
 
 gulp.task('watch', function () {
     gulp.watch('assets/css/**', ['css']);
+    gulp.watch('assets/js/**', ['js']);
 });
 
-gulp.task('zip', ['css'], function () {
+gulp.task('zip', ['js', 'css'], function () {
     var targetDir = 'dist/';
     var themeName = require('./package.json').name;
     var filename = themeName + '.zip';

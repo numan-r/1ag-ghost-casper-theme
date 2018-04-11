@@ -1,8 +1,8 @@
 {
-    "name": "casper",
-    "description": "The default personal blogging theme for Ghost. Beautiful, minimal and responsive.",
-    "demo": "https://demo.ghost.io",
-    "version": "2.2.0",
+    "name": "1ag-ghost-casper-theme",
+    "description": "Customized theme for www.1ag.in, forked from Casper",
+    "demo": "https://www.1ag.in",
+    "version": "1.0.0",
     "engines": {
         "ghost": ">=1.2.0"
     },
@@ -12,13 +12,13 @@
         "mobile": "assets/screenshot-mobile.jpg"
     },
     "scripts": {
-      "dev": "gulp",
-      "zip": "gulp zip"
+        "dev": "gulp",
+        "zip": "gulp zip"
     },
     "author": {
-        "name": "Ghost Foundation",
-        "email": "hello@ghost.org",
-        "url": "https://ghost.org"
+        "name": "Numan Ur Rehman Mohammed",
+        "email": "n.r@live.in",
+        "url": "https://www.1ag.in"
     },
     "gpm": {
         "type": "theme",
@@ -33,7 +33,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/TryGhost/Casper.git"
+        "url": "https://github.com/numan-r/1ag-ghost-casper-theme.git"
     },
     "bugs": "https://github.com/TryGhost/Casper/issues",
     "contributors": "https://github.com/TryGhost/Casper/graphs/contributors",
@@ -44,12 +44,14 @@
         "gulp-livereload": "3.8.1",
         "gulp-postcss": "6.1.1",
         "gulp-sourcemaps": "1.6.0",
+        "gulp-uglify": "^3.0.0",
         "gulp-util": "3.0.7",
         "gulp-watch": "4.3.8",
         "gulp-zip": "4.0.0",
         "postcss-color-function": "2.0.1",
         "postcss-custom-properties": "5.0.1",
-        "postcss-easy-import": "1.0.1"
+        "postcss-easy-import": "1.0.1",
+        "pump": "^3.0.0"
     },
     "config": {
         "posts_per_page": 25
