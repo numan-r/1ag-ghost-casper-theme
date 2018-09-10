@@ -2,7 +2,7 @@
     "name": "1ag-ghost-casper-theme",
     "description": "Customized theme for www.1ag.in, forked from Casper",
     "demo": "https://1ag.in",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "engines": {
         "ghost": ">=2.0.0"
     },
