@@ -1,10 +1,10 @@
 {
     "name": "1ag-ghost-casper-theme",
     "description": "Customized theme for www.1ag.in, forked from Casper",
-    "demo": "https://www.1ag.in",
+    "demo": "https://1ag.in",
     "version": "1.0.0",
     "engines": {
-        "ghost": ">=1.2.0"
+        "ghost": ">=2.0.0"
     },
     "license": "MIT",
     "screenshots": {
@@ -13,12 +13,13 @@
     },
     "scripts": {
         "dev": "gulp",
-        "zip": "gulp zip"
+        "zip": "gulp zip",
+        "test": "gscan ."
     },
     "author": {
         "name": "Numan Ur Rehman Mohammed",
         "email": "n.r@live.in",
-        "url": "https://www.1ag.in"
+        "url": "https://1ag.in"
     },
     "gpm": {
         "type": "theme",
@@ -29,7 +30,8 @@
     },
     "keywords": [
         "ghost",
-        "theme"
+        "theme",
+        "ghost-theme"
     ],
     "repository": {
         "type": "git",
@@ -40,6 +42,7 @@
     "devDependencies": {
         "autoprefixer": "6.3.6",
         "cssnano": "3.7.1",
+        "gscan": "^2.0.0",
         "gulp": "3.9.1",
         "gulp-livereload": "3.8.1",
         "gulp-postcss": "6.1.1",
